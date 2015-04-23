@@ -18,7 +18,8 @@
     "hubot-scripts": "~2.5.16",
     "hubot-slack": "~3.3.0",
     "hubot": "~2.12.0",
-    "hubot-maps": "0.0.2"
+    "hubot-maps": "0.0.2",
+    "cheerio": "0.7.0"
   },
   "engines": {
     "node": "0.10.x"
