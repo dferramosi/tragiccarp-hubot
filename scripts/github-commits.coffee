@@ -55,6 +55,8 @@ module.exports = (robot) ->
           if push.deleted
             robot.send user, "#{push.pusher.name} deleted: #{push.ref}"
       else if !process.env.HUBOT_GITHUB_COMMITS_ONLY
-        robot.send user, "#{push.context} commit \"#{push.commit.commit.message}\" is in state \"#{push.state}\" with message : \"#{push.description}\""
+        robot.send user, "#{push.context} sent a message about commit \"#{push.commit.commit.message}\""
+        robot.send user, "Description: #{push.description}"
+        robot.send user, "State: #{push.state}"
     catch error
       console.log "github-commits error: #{error}. Push: #{push}"
